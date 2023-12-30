@@ -1,10 +1,7 @@
-// Import stylesheets
-import './style.css';
+const aliveSrc = "🐷";
+const deadSrc = "🍖";
 
-const aliveSrc = '🐷';
-const deadSrc = '🍖';
-
-let yearMillis = 365 * 24 * 60 * 60 * 10;
+let yearMillis = 365 * 24 * 60 * 60 * 1000;
 let deathsPerYear = 52000000;
 let deathMillis = Math.ceil(yearMillis / deathsPerYear);
 
@@ -15,11 +12,11 @@ let kills = 0;
 let upNext = [];
 
 function kill() {
-  let container = document.querySelector('#schlachthof');
+  let container = document.querySelector("#schlachthof");
 
   if (upNext.length <= refillSize) {
     for (let i = 0; i < batchSize; i++) {
-      let next = document.createElement('span');
+      let next = document.createElement("span");
       next.innerHTML = aliveSrc;
       upNext.push(next);
       container.appendChild(next);
@@ -31,7 +28,7 @@ function kill() {
   next.innerHTML = deadSrc;
 
   kills++;
-  document.querySelector('#counter').textContent = kills;
+  document.querySelector("#counter").textContent = kills;
 }
 
 function setInterval2(callback, millis) {
