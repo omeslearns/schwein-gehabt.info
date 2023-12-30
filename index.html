@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Schwein gehabt</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <main>
+      <header>
+        In Deutschland werden rund 52 Millionen Schweine pro Jahr (2021)
+        geschlachtet (Quelle:
+        <a
+          href="https://www.bzfe.de/lebensmittel/vom-acker-bis-zum-teller/schweinefleisch/schweinefleisch-verarbeitung/"
+        >
+          Bundeszentrum für Ernährung)</a
+        >, weil „Ist lecker!“ und „War schon immer so“ (Quelle:
+        Fleischbefürworter). Das sind im Durchschnitt 1,64 Schweine pro Sekunde.
+        Um diese unglaubliche Zahl erlebbar zu machen, visualisiert
+        <i>schwein-gehabt</i> diese Tötungen.
+        <!-- Schwankungen wegen Tageszeit, Wochentag oder Saison sind
+      nicht gezeigt; wir mitteln. -->
+      </header>
+
+      <section id="stats">
+        <span id="counter">0</span> tote Schweine in 🇩🇪 <br />seit deinem Aufruf
+        dieser Webseite
+      </section>
+      <section id="schlachthof"></section>
+    </main>
+    <script type="module" src="./index.js" />
+  </body>
+</html>
